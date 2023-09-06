@@ -1,0 +1,20 @@
+- name: Configure EC2 Instances
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update package index
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install Kubernetes
+      apt:
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+        state: present
