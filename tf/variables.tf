@@ -1,4 +1,3 @@
-variable "IaC_kp" {
+variable "iac_kp" {
   description = "ssh access key for these instances"
-  default = "IaC_kp"
 }
